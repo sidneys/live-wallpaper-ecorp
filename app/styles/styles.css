@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 48px;
+  background: rgba(20,20,20,1);
+}
+
+#logo {
+    position:relative;
+    width: 6em;
+    height: 7em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#letter, #text {
+    text-align: center;
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(255,255,255,0.8);
+}
+
+#letter {
+    transform: rotate(-40deg) translateX(-0.05em);
+    font-size: 5em;
+    line-height: 100%;
+}
+
+#text {
+    margin-top: 0.2em;
+    white-space: nowrap;
+}

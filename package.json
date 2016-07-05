@@ -1,0 +1,35 @@
+{
+  "name": "live-wallpaper-ecorp",
+  "version": "1.0.0",
+  "description": "Electron-based live wallpaper showing a glitched E Corp / Evil Corp logo.",
+  "license": "MIT",
+  "main": "./app/index.js",
+  "author": {
+    "name": "sidneys",
+    "url": "http://sidneys.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sidneys/live-wallpaper-ecorp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sidneys/live-wallpaper-ecorp/issues"
+  },
+  "homepage": "http://sidneys.github.io/live-wallpaper-ecorp",
+  "keywords": [
+    "mr robot",
+    "fsociety",
+    "e corp",
+    "evil corp"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "debug": "electron ./app"
+  },
+  "devDependencies": {
+    "electron": "^0.4.1",
+    "electron-prebuilt": "^1.2.5"
+  }
+}
