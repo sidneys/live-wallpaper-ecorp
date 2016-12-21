@@ -18,6 +18,8 @@
     "sub": true,
     "node": true,
     "globals": {
+        "Audio": false,
+        "global": false,
         "Notification": true
     }
 }

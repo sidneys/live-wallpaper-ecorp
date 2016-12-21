@@ -1,38 +1,84 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 48px;
-  background: rgba(20,20,20,1);
+@font-face {
+  font-family: "Arial Black Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/arial-black.eot");
+  src: url("../fonts/arial-black.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/arial-black.woff") format("woff"),
+       url("../fonts/arial-black.ttf") format("truetype");
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(20, 20, 20);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #logo {
-    position:relative;
-    width: 6em;
-    height: 7em;
+    width: 50%;
+    padding: 0;
+    height: 50%;
     margin: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 0;
+    top: 25%;
+    left: 25%;
 }
 
 #letter, #text {
+    font-family: "Arial Black Regular", "Arial", sans-serif;
+    font-weight: 400;
     text-align: center;
-    font-family: "Arial Black", sans-serif;
     text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-    color: rgba(255,255,255,0.8);
 }
 
 #letter {
-    transform: rotate(-40deg) translateX(-0.05em);
-    font-size: 5em;
+    font-size: 33rem;
+    transform: rotate(-40deg) translateX(-2rem);
     line-height: 100%;
+    color: rgb(255, 255, 255);
 }
 
 #text {
-    margin-top: 0.2em;
+    font-size: 6rem;
+    margin-top: 1rem;
     white-space: nowrap;
+    color: rgb(255, 255, 255);
+}
+
+#interlace {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+#interlace::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#interlace::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
 }

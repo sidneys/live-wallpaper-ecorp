@@ -1,9 +1,9 @@
 {
   "name": "live-wallpaper-ecorp",
-  "version": "1.0.0",
-  "description": "Electron-based live wallpaper showing a glitched E Corp / Evil Corp logo.",
+  "productName": "E-Corp Live Wallpaper",
+  "version": "1.5.5",
+  "description": "Electron-based live wallpaper showing a glitched E Corp / Evil Corp logo",
   "license": "MIT",
-  "main": "./app/index.js",
   "author": {
     "name": "sidneys",
     "url": "http://sidneys.github.io"
@@ -15,7 +15,11 @@
   "bugs": {
     "url": "https://github.com/sidneys/live-wallpaper-ecorp/issues"
   },
-  "homepage": "http://sidneys.github.io/live-wallpaper-ecorp",
+  "homepage": "https://sidneys.github.io/live-wallpaper-ecorp",
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "keywords": [
     "mr robot",
     "fsociety",
@@ -23,13 +27,70 @@
     "evil corp"
   ],
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=7.0.0"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "appdirectory": "^0.1.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-electron": "^0.37.8",
+    "chalk": "^1.1.3",
+    "electron": "^1.4.13",
+    "electron-compile": "^5.0.0",
+    "electron-compilers": "5.0.0",
+    "electron-connect": "^0.6.1",
+    "electron-debug": "^1.1.0",
+    "electron-editor-context-menu": "^1.1.1",
+    "electron-packager": "^8.4.0",
+    "electron-settings": "^2.2.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "file-url": "^2.0.0",
+    "fkill": "^4.1.0",
+    "fs-extra": "^1.0.0",
+    "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.4.0",
+    "keypath": "^0.0.1",
+    "lodash": "^4.17.2",
+    "node-archs": "^1.0.0",
+    "node-platforms": "^2.0.0",
+    "normalize-url": "^1.8.0",
+    "open": "0.0.5",
+    "progress": "^1.1.8",
+    "publish-release": "^1.3.3",
+    "rimraf": "^2.5.4",
+    "try-require": "^1.2.1",
+    "urlglob": "^0.1.0"
+  },
+  "optionalDependencies": {
+    "appdmg": "^0.4.5",
+    "electron-installer-debian": "^0.4.0",
+    "electron-winstaller": "^2.5.1"
+  },
+  "main": "./app/main.js",
+  "bin": {
+    "live-wallpaper-ecorp": "./bin/cli.js"
   },
   "scripts": {
-    "debug": "electron ./app"
+    "deploy:github": "node ./lib/deploy-github.js -- ",
+    "start": "./node_modules/.bin/electron ./app/main.js",
+    "start:dev": "./node_modules/.bin/electron ./app/main.js",
+    "start:livereload": "./node_modules/.bin/gulp livereload",
+    "build": "node ./lib/build.js -- ",
+    "localsetup": "./node_modules/.bin/babel-node ./lib/localsetup.js -- ",
+    "localsetup:dev": "./node_modules/.bin/babel-node ./lib/localsetup.js -- ",
+    "localsetup:rebuild": "./node_modules/.bin/babel-node ./lib/localsetup.js -- ",
+    "localsetup:rebuild:dev": "./node_modules/.bin/babel-node ./lib/localsetup.js -- "
   },
-  "devDependencies": {
-    "electron": "^0.4.1",
-    "electron-prebuilt": "^1.2.5"
+  "build": {
+    "electronVersion": "1.4.13",
+    "productName": "E-Corp Live Wallpaper",
+    "id": "de.sidneys.live-wallpaper-ecorp",
+    "company": "sidneys.github.io",
+    "category": "public.app-category.utilities",
+    "directoryBuild": "build",
+    "directoryIcons": "icons",
+    "iconUrl": "https://raw.githubusercontent.com/sidneys/live-wallpaper-ecorp/release/icons/win32/icon-app.ico"
   }
 }

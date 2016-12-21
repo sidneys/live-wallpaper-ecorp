@@ -1,7 +1,33 @@
+# BASELINE
+# macOS
+.DS_Store
+
 # Logs
 logs
 *.log
 
+# Temporary
+temp
+tmp
+
+# Cache
+.cache
+cache
+.sass-cache/
+
+# JetBrains
+.idea/
+*.sln.iml
+
+# Compiled
+build
+
+# Node
+node_modules
+jspm_packages
+
+
+## NPM
 # Runtime data
 pids
 *.pid
@@ -16,17 +42,6 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build
 
-# Dependency directory
-# Deployed apps should consider commenting this line out:
-# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
-node_modules
-jspm_packages
-
-# mac hidden file
-.DS_Store
-
-# ignore test file
-test.js
+# ELECTRON-CLOUD-DEPLOY CACHES
+electron-cloud-deploy-cache
