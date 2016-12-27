@@ -1,96 +1,151 @@
 {
   "name": "live-wallpaper-ecorp",
   "productName": "E-Corp Live Wallpaper",
-  "version": "1.5.5",
+  "version": "2.0.2",
   "description": "Electron-based live wallpaper showing a glitched E Corp / Evil Corp logo",
   "license": "MIT",
+  "homepage": "https://sidneys.github.io/live-wallpaper-ecorp",
   "author": {
     "name": "sidneys",
-    "url": "http://sidneys.github.io"
+    "email": "sidneys.github.io@outlook.com",
+    "url": "https://github.com/sidneys"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sidneys/live-wallpaper-ecorp.git"
+    "url": "https://github.com/sidneys/live-wallpaper-ecorp.git"
   },
   "bugs": {
     "url": "https://github.com/sidneys/live-wallpaper-ecorp/issues"
   },
-  "homepage": "https://sidneys.github.io/live-wallpaper-ecorp",
+  "engines": {
+    "node": ">=7.0.0"
+  },
   "os": [
     "darwin",
     "linux"
   ],
   "keywords": [
-    "mr robot",
-    "fsociety",
-    "e corp",
-    "evil corp"
+    "pushbullet",
+    "pushes",
+    "notification",
+    "chrome",
+    "safari",
+    "desktop",
+    "electron",
+    "mac",
+    "macos",
+    "osx",
+    "windows",
+    "linux",
+    "ubuntu",
+    "native",
+    "pushover"
   ],
-  "engines": {
-    "node": ">=7.0.0"
-  },
   "preferGlobal": true,
   "dependencies": {
     "app-root-path": "^2.0.1",
     "appdirectory": "^0.1.0",
-    "babel-cli": "^6.18.0",
-    "babel-preset-electron": "^0.37.8",
+    "auto-launch": "git://github.com/sidneys/node-auto-launch.git#master",
+    "babel-cli": "^6.24.1",
+    "babel-preset-electron": "^1.4.15",
     "chalk": "^1.1.3",
-    "electron": "^1.4.13",
-    "electron-compile": "^5.0.0",
-    "electron-compilers": "5.0.0",
-    "electron-connect": "^0.6.1",
-    "electron-debug": "^1.1.0",
+    "chalkline": "0.0.5",
     "electron-editor-context-menu": "^1.1.1",
-    "electron-packager": "^8.4.0",
-    "electron-settings": "^2.2.2",
-    "electron-squirrel-startup": "^1.0.0",
-    "file-url": "^2.0.0",
+    "electron-settings": "^3.0.14",
+    "electron-updater": "^1.15.0",
+    "file-type": "^4.3.0",
+    "file-url": "^2.0.2",
+    "fs-extra": "^3.0.1",
+    "html2canvas": "^0.5.0-beta4",
+    "keypath": "^0.0.1",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "moment": "^2.18.1",
+    "parse-semver": "^1.1.1",
+    "present": "^1.0.0",
+    "read-chunk": "^2.0.0",
+    "semver-compare": "^1.0.0",
+    "simple-reload": "0.0.4",
+    "try-require": "latest"
+  },
+  "devDependencies": {
+    "electron": "^1.7.1",
+    "electron-builder": "^17.8.0",
+    "electron-connect": "^0.6.1",
+    "electron-prebuilt-compile": "^1.7.1",
     "fkill": "^4.1.0",
-    "fs-extra": "^1.0.0",
+    "git-branch": "^0.3.0",
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.4.0",
-    "keypath": "^0.0.1",
-    "lodash": "^4.17.2",
-    "node-archs": "^1.0.0",
-    "node-platforms": "^2.0.0",
-    "normalize-url": "^1.8.0",
-    "open": "0.0.5",
-    "progress": "^1.1.8",
+    "gulp-load-plugins": "^1.5.0",
+    "hash-files": "^1.1.1",
+    "is-ci": "^1.0.10",
+    "json2md": "^1.5.8",
+    "progress": "^2.0.0",
     "publish-release": "^1.3.3",
-    "rimraf": "^2.5.4",
-    "try-require": "^1.2.1",
-    "urlglob": "^0.1.0"
+    "yamljs": "^0.2.10"
   },
-  "optionalDependencies": {
-    "appdmg": "^0.4.5",
-    "electron-installer-debian": "^0.4.0",
-    "electron-winstaller": "^2.5.1"
-  },
-  "main": "./app/main.js",
+  "main": "./app/scripts/main/components/application.js",
   "bin": {
     "live-wallpaper-ecorp": "./bin/cli.js"
   },
   "scripts": {
-    "deploy:github": "node ./lib/deploy-github.js -- ",
-    "start": "./node_modules/.bin/electron ./app/main.js",
-    "start:dev": "./node_modules/.bin/electron ./app/main.js",
-    "start:livereload": "./node_modules/.bin/gulp livereload",
-    "build": "node ./lib/build.js -- ",
-    "localsetup": "./node_modules/.bin/babel-node ./lib/localsetup.js -- ",
-    "localsetup:dev": "./node_modules/.bin/babel-node ./lib/localsetup.js -- ",
-    "localsetup:rebuild": "./node_modules/.bin/babel-node ./lib/localsetup.js -- ",
-    "localsetup:rebuild:dev": "./node_modules/.bin/babel-node ./lib/localsetup.js -- "
+    "build": "node ./lib/build.js",
+    "deploy": "node ./lib/deploy.js",
+    "livereload": "./node_modules/.bin/gulp",
+    "localsetup": "./node_modules/.bin/babel-node ./lib/localsetup.js",
+    "releasenotes": "node ./lib/releasenotes.js",
+    "dev": "./node_modules/.bin/electron ./app/scripts/main/components/application.js"
   },
   "build": {
-    "electronVersion": "1.4.13",
-    "productName": "E-Corp Live Wallpaper",
-    "id": "de.sidneys.live-wallpaper-ecorp",
-    "company": "sidneys.github.io",
-    "category": "public.app-category.utilities",
-    "directoryBuild": "build",
-    "directoryIcons": "icons",
-    "iconUrl": "https://raw.githubusercontent.com/sidneys/live-wallpaper-ecorp/release/icons/win32/icon-app.ico"
+    "appId": "de.sidneys.live-wallpaper-ecorp",
+    "directories": {
+      "buildResources": "./build/staging",
+      "output": "./build/output"
+    },
+    "files": [
+      "!build",
+      "!gh-pages",
+      "!resources",
+      "!website"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "./icons/darwin/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "./icons/win32/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "./icons/linux",
+      "target": [
+        "AppImage",
+        "deb",
+        "pacman",
+        "rpm"
+      ]
+    },
+    "dmg": {
+      "background": "./icons/darwin/background-setup.png",
+      "icon": "./icons/darwin/icon-setup.icns"
+    },
+    "nsis": {
+      "artifactName": "${name}-${version}-setup.${ext}",
+      "deleteAppDataOnUninstall": true,
+      "installerHeader": "./icons/win32/header-setup.bmp",
+      "installerHeaderIcon": "./icons/win32/icon.ico",
+      "installerIcon": "./icons/win32/icon-setup.ico",
+      "installerSidebar": "./icons/win32/background-setup.bmp",
+      "oneClick": false,
+      "runAfterFinish": false
+    }
   }
 }

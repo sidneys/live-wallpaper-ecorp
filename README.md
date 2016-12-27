@@ -1,16 +1,11 @@
-# E-Corp Live Wallpaper [![Beta](https://img.shields.io/badge/status-alpha-blue.svg?style=flat)]() [![TravisCI](http://img.shields.io/travis/sidneys/live-wallpaper-ecorp.svg?style=flat)](http://travis-ci.org/sidneys/live-wallpaper-ecorp) [![AppVeyor](https://ci.appveyor.com/api/projects/status/d69sb6iav7tnrldq?svg=true)](https://ci.appveyor.com/project/sidneys/live-wallpaper-ecorp) [![npm](https://img.shields.io/npm/v/live-wallpaper-ecorp.svg?style=flat)](https://npmjs.com/package/live-wallpaper-ecorp) 
+# E-Corp Live Wallpaper [![Beta](https://img.shields.io/badge/status-alpha-blue.svg?style=flat)]() [![travis](https://img.shields.io/travis/sidneys/live-wallpaper-ecorp.svg?style=flat)](https://travis-ci.org/sidneys/live-wallpaper-ecorp) [![appveyor](https://ci.appveyor.com/api/projects/status/oc57pq7hfslqg3ru?svg=true)](https://ci.appveyor.com/project/sidneys/live-wallpaper-ecorp) [![npm](https://img.shields.io/npm/v/live-wallpaper-ecorp.svg?style=flat)](https://npmjs.com/package/live-wallpaper-ecorp) [![dependencies](https://img.shields.io/david/sidneys/live-wallpaper-ecorp.svg?style=flat-square)](https://npmjs.com/package/live-wallpaper-ecorp) [![devDependencies](https://img.shields.io/david/dev/sidneys/live-wallpaper-ecorp.svg?style=flat-square)](https://npmjs.com/package/live-wallpaper-ecorp)
 
 <p align="center">
-  <b>Animated Wallpaper app featuring the 'glitched' <a href="http://mrrobot.wikia.com/wiki/E_Corp">E-Corp (Evil Corp)</a> company logo from <a href="https://www.whoismrrobot.com">Mr. Robot</a>.</b><br>
-  <img height="250px" src="https://raw.githubusercontent.com/sidneys/live-wallpaper-ecorp/release/resources/graphics/icon-app.png"/><br><br>
-  Based on <a href="https://nodejs.org">nodejs</a> and <a href="http://electron.atom.io">Electron</a>.<br><br>
+  <b>Animated Wallpaper</b> featuring a glitched <a href="http://mrrobot.wikia.com/wiki/E_Corp">E-Corp</a> company logo,<br>
+ Known as <a href="http://mrrobot.wikia.com/wiki/E_Corp">Evil Corp</a> from <a href="https://www.whoismrrobot.com">Mr. Robot</a>.<br><br>
+  <img src="https://raw.githubusercontent.com/sidneys/live-wallpaper-ecorp/release/resources/screenshots/screenshot-macos-2.gif"/><br><br>
   <i>Not affiliated with USA Network, Anonymous Content, Universal Cable Productions or NBC Universal Television Distribution.</i>
 </p>
-
-
-------
-
-![macOS](https://raw.githubusercontent.com/sidneys/live-wallpaper-ecorp/release/resources/screenshots/screenshot-macos-2.gif)
 
 ------
 
@@ -116,14 +111,14 @@ sudo apt-get install wine mono fakeroot dpkg
 
 The process is managed by a custom layer of node scripts and Electron-optimized configuration templates.
 Completed Installation packages are deployed to [GitHub Releases](https://github.com/sidneys/live-wallpaper-ecorp/releases). Builds for all platforms and architectures take about 5 minutes.
-Backed by the open-source-friendly guys at [Travis](http://travis-ci.org/) and AppVeyor](https://ci.appveyor.com/) and running [electron-packager](https://github.com/electron-userland/electron-packager) under the hood.
+Backed by the open-source-friendly guys at [Travis](https://travis-ci.org/) and [AppVeyor](https://ci.appveyor.com/) and running [electron-packager](https://github.com/electron-userland/electron-packager) under the hood.
 
 ### Setup
 
 1.  [Fork](https://github.com/sidneys/live-wallpaper-ecorp/fork) the repo
 2.  Generate your GitHub [Personal Access Token](https://github.com/settings/tokens) using "repo" as scope. Copy it to the clipboard.
 3.  **macOS + Linux**
-     1. Sign in to [Travis](http://travis-ci.org/) using GitHub.
+     1. Sign in to [Travis](https://travis-ci.org/) using GitHub.
      2. Open your [Travis Profile](https://travis-ci.org/profile), click "Sync Account" and wait for the process to complete.
      3. Find this repository in the list, enable it and click "⚙" to open its settings.
      4. Create a new Environment Variable named **GITHUB_TOKEN**. Paste your Token from step 2 as *value*. 
@@ -158,12 +153,11 @@ If this status quo changes, so will this application.
 
 ## <a name="contribute"/></a> Contact ![Contributions Wanted](https://img.shields.io/badge/contributions-wanted-red.svg?style=flat)
 
-* [Gitter](http://gitter.im/sidneys/live-wallpaper-ecorp) Developer Chat
-* [Issues](http;//github.com/sidneys/live-wallpaper-ecorp/issues) File, track and discuss features and issues
-* [Wiki](http;//github.com/sidneys/live-wallpaper-ecorp/wiki) Read or contribute to the project Wiki
+* [Gitter](https://gitter.im/sidneys/live-wallpaper-ecorp) Developer Chat
+* [Issues](https://github.com/sidneys/live-wallpaper-ecorp/issues) File, track and discuss features and issues
+* [Wiki](https://github.com/sidneys/live-wallpaper-ecorp/wiki) Read or contribute to the project Wiki
 
 
 ## <a name="author"/></a> Author
 
-[sidneys](http://sidneys.github.io) 2016
-
+[sidneys](https://sidneys.github.io) 2017

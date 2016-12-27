@@ -1,34 +1,44 @@
 #!/usr/bin/env node
+'use strict';
 
 
 /**
- * Modules: Node
+ * Modules
+ * Node
  * @global
+ * @constant
  */
-var path = require('path'),
-    childProcess = require('child_process');
+const path = require('path');
+const childProcess = require('child_process');
 
 /**
- * Modules: External
+ * Modules
+ * External
  * @global
+ * @constant
  */
-var electronPath = require('electron-prebuilt');
+const appRootPath = require('app-root-path').path;
+const electron = require('electron');
 
 /**
- * Modules: Internal
+ * Modules
+ * Internal
  * @global
+ * @constant
  */
-var appRoot = appRoot = path.join(__dirname, '..'),
-    packageJson = require(path.join(appRoot, 'package.json'));
+const packageJson = require(path.join(appRootPath, 'package.json'));
+
 
 /**
  * Path to Electron application
  * @global
  */
-var appMain = path.join(appRoot, packageJson.main);
+let appMain = path.join(appRootPath, packageJson.main);
 
 
-// Run
-childProcess.spawn(electronPath, [ appMain ], {
+/**
+ * Main
+ */
+childProcess.spawn(electron, [ appMain ], {
     stdio: 'inherit'
 });

@@ -1,25 +1,38 @@
+/* ==========================================================================
+   FONT-FACE
+   ========================================================================== */
+
 @font-face {
-  font-family: "Arial Black Regular";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/arial-black.eot");
-  src: url("../fonts/arial-black.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/arial-black.woff") format("woff"),
-       url("../fonts/arial-black.ttf") format("truetype");
+    font-family: "Arial Black Regular";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/arial-black.eot");
+    src: url("../fonts/arial-black.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/arial-black.woff") format("woff"),
+    url("../fonts/arial-black.ttf") format("truetype");
 }
+
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
 
 html {
     font-size: 62.5%;
-    -webkit-font-smoothing: antialiased;
-    background-color: rgb(20, 20, 20);
+    background-color: transparent;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Arial Black Regular", "Arial", sans-serif;
 }
 
-#logo {
+/* ==========================================================================
+   LOGO
+   ========================================================================== */
+
+.logo__container {
     width: 50%;
     padding: 0;
     height: 50%;
@@ -27,58 +40,89 @@ html {
     position: absolute;
     top: 25%;
     left: 25%;
+    filter: opacity(0.95);
+    transform: scale(1.5);
 }
 
-#letter, #text {
-    font-family: "Arial Black Regular", "Arial", sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-#letter {
+.logo__letter {
     font-size: 33rem;
     transform: rotate(-40deg) translateX(-2rem);
     line-height: 100%;
     color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
-#text {
+.logo__text {
     font-size: 6rem;
     margin-top: 1rem;
     white-space: nowrap;
     color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
-#interlace {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  overflow: hidden;
+/* ==========================================================================
+   OVERLAY
+   ========================================================================== */
+
+.overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
 }
 
-#interlace::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  pointer-events: none;
+.overlay::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
-#interlace::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  pointer-events: none;
+.overlay::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background-size: 12px 4px;
+    background-image:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 75%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.01));
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+/* drag + drop
+   ========================================================================== */
+
+.draggable {
+    app-region: drag !important;
+    -webkit-app-region: drag !important;
+}
+
+/* visibility
+   ========================================================================== */
+
+.hide {
+    opacity: 0 !important;
+}
+
+.show {
+    opacity: 1 !important;
 }

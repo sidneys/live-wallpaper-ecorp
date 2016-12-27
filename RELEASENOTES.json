@@ -1,0 +1,25 @@
+{
+  "2.0.2": {
+    "🍾 features": [
+      "Adds 'Hide Wallpaper' feature",
+      "Adds 'Launch on Startup' feature",
+      "UI enhancements",
+      "Canvas rendering improvements"
+    ],
+    "🚨 fixes": [
+      "Fixes window positioning (Linux)"
+    ],
+    "📒 documentation": [
+      "Augments README.MD",
+      "Adds CONTRIBUTING.MD",
+      "Adds issue template",
+      "Adds pull request template"
+    ],
+    "👷 internals": [
+      "Upgrades Electron to 1.7.1",
+      "Migrates dependencies to npm",
+      "Upgrades build system",
+      "Adds deployment system"
+    ]
+  }
+}
